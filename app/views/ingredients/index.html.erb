@@ -1,0 +1,7 @@
+<h1>Listing Ingredients</h1>
+
+<ul class='ingredient_description description'>
+	<% @ingredients.each do |i| %>
+		<li><%= i.name %></li>
+	<% end %>
+</ul>

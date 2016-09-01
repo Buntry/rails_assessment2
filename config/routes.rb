@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 	get "/auth/:provider/callback" => "sessions#check_omniauth"
 	
 	#Recipes
-	resources :recipes, only: [:new, :create, :index, :show]
+	resources :recipes, only: [:new, :create, :index, :show] do
+		resources :ingredients, only: [:index]
+	end
+	
+	get '/ingredients' => 'ingredients#index', as: 'ingredients'
 	
 end
