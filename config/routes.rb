@@ -8,4 +8,7 @@ Rails.application.routes.draw do
 	post '/login'  => 'sessions#create'
 	get  '/logout' => 'sessions#destroy'
 	
+	#Omniauth
+	get "/auth/:provider/callback" => "sessions#check_omniauth"
+	
 end

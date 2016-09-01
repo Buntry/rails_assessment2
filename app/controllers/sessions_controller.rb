@@ -16,18 +16,14 @@ class SessionsController < ApplicationController
 		redirect_to root_path
 	end
 	
-	def sign_in_with_omniauth
-		user = User.find_by(uid: auth['uid'])
-		if user
+	def check_omniauth
+		if user = User.find_by(uid: auth['uid'])
 			session[:user_id] = user.id
-			redirect_to root_path
 		else
-			redirect_to login_path
+			User.create_with_omniauth(auth)
 		end
+		
+		redirect_to root_path
 	end
-	
-	def create_with_omniauth
-		User.create_with_omniauth(auth) unless User.find_by(name: auth['info']['name'])
-		sign_in_with_omniauth
-	end
+
 end
