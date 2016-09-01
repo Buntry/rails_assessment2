@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 	
 	#Users
 	resources :users, only: [:new, :create, :index, :show, :destroy]
+	delete '/users/:id' => 'users#destroy', as: 'destroy_user'
 	
 	#Sessions
 	get  '/login'  => 'sessions#new'
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
 	resources :recipes, only: [:new, :create, :index, :show] do
 		resources :ingredients, only: [:index]
 	end
+	delete '/recipes/:id' => 'recipes#destroy', as: 'destroy_recipe'
 	
 	get '/ingredients' => 'ingredients#index', as: 'ingredients'
 	
