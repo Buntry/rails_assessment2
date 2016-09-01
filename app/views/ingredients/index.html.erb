@@ -2,6 +2,6 @@
 
 <ul class='ingredient_description description'>
 	<% @ingredients.each do |i| %>
-		<li><%= i.name %></li>
+		<li><%= i.name %> | <%= i.uses %> uses</li>
 	<% end %>
 </ul>

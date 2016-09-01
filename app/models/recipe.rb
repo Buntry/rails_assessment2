@@ -8,6 +8,9 @@ class Recipe < ActiveRecord::Base
 	
 	accepts_nested_attributes_for :ingredients
 	
+	scope :by_user, -> (user) { where(user_id: user.id) }
+	scope :most_ingredients, -> { order('recipe_ingredients_count desc') }
+	
 	def ingredients_attributes=(ingredient_attributes)
 		ingredient_attributes.values.each do |ingredient_attribute|
 			if ingredient_attribute['name'].length > 0
