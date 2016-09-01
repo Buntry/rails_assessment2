@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-	root 'users#index'
+	root 'recipes#index'
 	
-	resources :users, only: [:new, :create, :index, :show]
+	#Users
+	resources :users, only: [:new, :create, :index, :show, :destroy]
 	
 	#Sessions
 	get  '/login'  => 'sessions#new'
@@ -10,5 +11,8 @@ Rails.application.routes.draw do
 	
 	#Omniauth
 	get "/auth/:provider/callback" => "sessions#check_omniauth"
+	
+	#Recipes
+	resources :recipes, only: [:new, :create, :index, :show]
 	
 end

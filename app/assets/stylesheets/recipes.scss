@@ -1,0 +1,20 @@
+// Place all the styles related to the recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.recipe_header * {
+	display: inline-block;
+}
+
+#recipe_credit {
+	margin-left: 5px;
+}
+
+.recipe_description {
+	margin: 10px;
+	font-size: 20px;
+}
+
+select {
+	height: 200px;
+	width: 150px;
+}

@@ -1,0 +1,14 @@
+<div class='recipe_header'>
+	<h1><%= @recipe.name %></h1>
+	<h3 id='recipe_credit'>by <%= @recipe.user.name %></h3>
+</div>
+
+<h2>Description</h2>
+<p><%= @recipe.description %></p>
+
+<h2>Ingredient List</h2>
+<ul>
+	<% @recipe.ingredients.each do |i| %>
+	<li><%= i.name %></li>
+	<% end %>
+</ul>
