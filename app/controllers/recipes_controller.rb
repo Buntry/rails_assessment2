@@ -16,6 +16,7 @@ class RecipesController < ApplicationController
 		if @recipe.save
 			redirect_to @recipe
 		else
+			flash[:error] = 'There was an error'
 			render :new
 		end
 	end
