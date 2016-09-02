@@ -1,28 +1,15 @@
-== README
+== Application Description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is a recipe manager that works on the ruby on rails framework. Users can create recipes and ingredients and look at other users' recipes and ingredients. 
 
-Things you may want to cover:
+== Forking and Cloning
 
-* Ruby version
+If you want to fork this project for some reason do it. This is a small project that I did in a couple hours, and really isn't fleshed out. It's more of a measure of my skill, but if you want it on your harddrive, no problem.
 
-* System dependencies
+== Contributing
 
-* Configuration
+This project is an assessment of my abilities with the rails framework. Any help would be cheating so I won't look at any pull requests.
 
-* Database creation
+== Licensing
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This project is protected under the standard MIT license. 
