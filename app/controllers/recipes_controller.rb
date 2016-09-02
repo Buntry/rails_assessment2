@@ -4,7 +4,11 @@ class RecipesController < ApplicationController
 	end
 	
 	def new
-		@recipe = Recipe.new
+		if signed_in?
+			@recipe = Recipe.new
+		else
+			redirect_to root_path, error: 'You need to be signed in to create a recipe'
+		end
 	end
 	
 	def create

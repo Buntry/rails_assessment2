@@ -22,6 +22,9 @@ class UsersController < ApplicationController
 	
 	def destroy
 		@user = User.find(params[:id])
+		@user.recipes.each do |r|
+			r.delete
+		end
 		@user.delete
 		
 		redirect_to root_path

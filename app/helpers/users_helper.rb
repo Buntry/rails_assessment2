@@ -1,6 +1,6 @@
 module UsersHelper
 	def showable user
-		link_to user.name, user
+		(link_to user.name, user) if user
 	end
 	
 	def deletable(user)

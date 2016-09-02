@@ -1,1 +1,6 @@
-<%= render @user %>
+<h1><%= @user.name %></h1>
+
+<h2>Recipes</h2>
+<ul>
+	<%= render partial: 'recipes/recipe', collection: @user.recipes %>
+</ul> 

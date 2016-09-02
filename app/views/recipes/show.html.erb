@@ -1,6 +1,6 @@
 <div class='recipe_header'>
 	<h1><%= @recipe.name %></h1>
-	<h3 id='recipe_credit'>by <%= @recipe.user.name %></h3>
+	<h3 id='recipe_credit'>by <%= showable @recipe.user %></h3>
 </div>
 
 <h2>Description</h2>
